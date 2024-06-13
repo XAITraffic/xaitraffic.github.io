@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Introduction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container {
+            flex: 1;
+            margin: 20px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .authors {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .author-list {
+            margin: 10px 0;
+            list-style-type: none;
+            padding: 0;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .author-list li {
+            display: inline;
+            margin: 0 5px;
+        }
+
+        .organization-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .organization-list li {
+            margin: 5px 0;
+        }
+
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .links img {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h3 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .subsection h4 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .section table,
+        .section th,
+        .section td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+        .additional-info,
+        .citation {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            color: #fff;
+            font-size: 1.2em;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .sidebar ul li a:hover {
+            background: #575757;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>XTraffic: A Dataset Where Traffic Meets Incidents with Explainability and More</h1>
+        </div>
+        <div class="authors">
+            <ul class="author-list">
+                <li>Xiaochuan Gou<sup>1*</sup></li>,
+                <li>Ziyue Li<sup>2*</sup></li>,
+                <li>Tian Lan<sup>3</sup></li>,
+                <li>Junpeng Lin<sup>3</sup></li>,
+                <li>Zhishuai Li<sup>4</sup></li>,
+                <li>Bingyu Zhao<sup>5</sup></li>,
+                <li>Chen Zhang<sup>3</sup></li>,
+                <li>Di Wang<sup>1</sup></li>,
+                <li>Xiangliang Zhang<sup>1,6</sup></li>
+            </ul>
+            <ul class="organization-list">
+                <li><sup>1</sup> Abdullah University of Science and Technology, Saudi Arabia</li>
+                <li><sup>2</sup> University of Cologne, Germany</li>
+                <li><sup>3</sup> Tsinghua University, China</li>
+                <li><sup>4</sup> Institute of Automation, Chinese Academy of Sciences, China</li>
+                <li><sup>5</sup> Technical University of Vienna, Austria</li>
+                <li><sup>6</sup> University of Notre Dame, USA</li>
+            </ul>
+            <div class="links">
+                <a href="kaggle_dataset_url"><img src="kaggle_logo_url" alt="Kaggle"></a>
+                <a href="github_repo_url"><img src="github_logo_url" alt="GitHub"></a>
+            </div>
+        </div>
+        <div id="dataset-description" class="dataset-description section">
+            <h3>Dataset Description</h3>
+            <p>
+                This dataset includes information about... (provide a detailed description of the dataset, including its
+                purpose, how it was collected, any preprocessing steps, and what it can be used for).
+            </p>
+        </div>
+        <div id="download-link" class="download-link section">
+            <h3>Download</h3>
+            <p>
+                You can download the dataset <a href="download_link">here</a>.
+            </p>
+        </div>
+        <!-- Experiments Section -->
+        <div id="experiments" class="section">
+            <h3>Experiments</h3>
+            <!-- Traffic Forecasting -->
+            <div id="traffic-forecasting" class="subsection">
+                <h4>Traffic Forecasting</h4>
+                <p>Description of the task...</p>
+                <table>
+                    <!-- Table content here -->
+                </table>
+            </div>
+            <!-- Incident Analysis -->
+            <div id="incident-analysis" class="subsection">
+                <h4>Incident Analysis</h4>
+                <p>Description of the task...</p>
+                <table>
+                    <!-- Table content here -->
+                </table>
+                <img src="incident_analysis_figure_url" alt="Incident Analysis Figure">
+            </div>
+            <!-- Global Causal Analysis -->
+            <div id="global-causal-analysis" class="subsection">
+                <h4>Global Causal Analysis</h4>
+                <p>Description of the task...</p>
+                <img src="global_causal_analysis_figure1_url" alt="Global Causal Analysis Figure 1">
+                <img src="global_causal_analysis_figure2_url" alt="Global Causal Analysis Figure 2">
+            </div>
+            <!-- Local Causal Analysis with Meta Data -->
+            <div id="local-causal-analysis" class="subsection">
+                <h4>Local Causal Analysis with Meta Data</h4>
+                <p>Description of the task...</p>
+                <img src="local_causal_analysis_figure1_url" alt="Local Causal Analysis Figure 1">
+                <img src="local_causal_analysis_figure2_url" alt="Local Causal Analysis Figure 2">
+            </div>
+        </div>
+        <!-- Additional Information Section -->
+        <div id="additional-info" class="additional-info">
+            <h3>Additional Information</h3>
+            <p>Dataset License: Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</p>
+            <p>Code License: MIT</p>
+        </div>
+        <!-- Paper Citation Section -->
+        <div id="citation" class="citation">
+            <h3>Paper Citation</h3>
+            <p>Upcoming soon...</p>
+        </div>
+    </div>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#dataset-description">Dataset Description</a></li>
+            <li><a href="#download-link">Download</a></li>
+            <li><a href="#experiments">Experiments</a></li>
+            <ul>
+                <li><a href="#traffic-forecasting">Traffic Forecasting</a></li>
+                <li><a href="#incident-analysis">Incident Analysis</a></li>
+                <li><a href="#global-causal-analysis">Global Causal Analysis</a></li>
+                <li><a href="#local-causal-analysis">Local Causal Analysis</a></li>
+            </ul>
+            <li><a href="#additional-info">Additional Information</a></li>
+            <li><a href="#citation">Paper Citation</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

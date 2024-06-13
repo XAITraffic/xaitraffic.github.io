@@ -2,6 +2,23 @@
 <html lang="en">
 
 <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Cheatsheet · Bootstrap v5.3</title>
+
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cheatsheet.css" rel="stylesheet">
+
+    <script src="./assets/js/color-modes.js"></script>
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="cheatsheet.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dataset Introduction</title>
@@ -28,19 +45,40 @@
 
         .header h1 {
             margin: 0;
+            font-size: 2em;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 1.5em;
         }
 
         .authors {
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        .author {
-            margin-bottom: 10px;
+        .author-list {
+            margin: 10px 0;
+            list-style-type: none;
+            padding: 0;
+            display: inline-block;
+            text-align: left;
         }
 
-        .organization {
-            font-style: italic;
-            color: #666;
+        .author-list li {
+            display: inline;
+            margin: 0 5px;
+        }
+
+        .organization-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .organization-list li {
+            margin: 5px 0;
         }
 
         .links {
@@ -61,6 +99,11 @@
         .section h3 {
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
+        }
+
+        .subsection h4 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
         }
 
         .section table {
@@ -95,79 +138,470 @@
 
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Dataset Name</h1>
-            <h2>Based on the Paper: Paper Title</h2>
-        </div>
-        <div class="authors">
-            <h3>Authors:</h3>
-            <div class="author">
-                <strong>Author Name 1</strong>
-                <div class="organization">Organization 1</div>
-            </div>
-            <div class="author">
-                <strong>Author Name 2</strong>
-                <div class="organization">Organization 2</div>
-            </div>
-            <div class="author">
-                <strong>Author Name 3</strong>
-                <div class="organization">Organization 3</div>
-            </div>
-            <!-- Add more authors as needed -->
+
+        <!-- <div class="sidebar">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#dataset-description">Dataset Description</a></li>
+                <li><a href="#download-link">Download</a></li>
+                <li><a href="#experiments">Experiments</a></li>
+                <ul>
+                    <li><a href="#traffic-forecasting">Traffic Forecasting</a></li>
+                    <li><a href="#incident-analysis">Incident Analysis</a></li>
+                    <li><a href="#global-causal-analysis">Global Causal Analysis</a></li>
+                    <li><a href="#local-causal-analysis">Local Causal Analysis</a></li>
+                </ul>
+                <li><a href="#additional-info">Additional Information</a></li>
+                <li><a href="#citation">Paper Citation</a></li>
+            </ul>
+        </div> -->
+
+        <div class="container-fluid text-center my-5 me-1">
+            <h1 class="paper-title">XTraffic: A Dataset Where Traffic Meets Incidents
+                with Explainability and More
+            </h1>
+
+            <p class="authors">Xiaochuan Gou<sup>1*</sup>, Ziyue Li<sup>2*</sup>
+                , Tian Lan<sup>3</sup>, Junpeng Lin<sup>3</sup>, Zhishuai Li<sup>4</sup>,
+                Bingyu Zhao<sup>5</sup>, Chen Zhang<sup>3</sup>, Di Wang<sup>1</sup>, Xiangliang Zhang<sup>1,6</sup>
+            </p>
+            <p class="affiliations">
+                <sup>1</sup> Abdullah University of Science and Technology, Saudi Arabia<br>
+                <sup>2</sup>University of Cologne, Germany<br>
+                <sup>3</sup>Tsinghua University, China<br>
+                <sup>4</sup>Institute of Automation, Chinese Academy of Sciences, China<br>
+                <sup>5</sup>Technical University of Vienna, Austria<br>
+                <sup>6</sup>University of Notre Dame, USA<br>
+            </p>
+
             <div class="links">
-                <a href="kaggle_dataset_url"><img src="kaggle_logo_url" alt="Kaggle"></a>
-                <a href="github_repo_url"><img src="github_logo_url" alt="GitHub"></a>
+                <a href="https://www.kaggle.com/datasets/gpxlcj/xtraffic"><img
+                        src="https://www.kaggle.com/static/images/favicon.ico" alt="Dataset">Dataset</a>
+                <a href="https://github.com/xaitraffic/xtraffic"><img
+                        src="https://github.githubassets.com/favicons/favicon.png" alt="Demo Code">Demo Code</a>
             </div>
         </div>
-        <div class="dataset-description">
+
+        <div id="dataset-description" class="dataset-description section">
             <h3>Dataset Description:</h3>
             <p>
-                This dataset includes information about... (provide a detailed description of the dataset, including its
-                purpose, how it was collected, any preprocessing steps, and what it can be used for).
+                Historically, research in traffic and incidents has proceeded along two distinct but intrinsically
+                linked tracks. The traffic domain has focused on enhancing deep learning models to incrementally improve
+                prediction
+                accuracy, while the incident track has predominantly concentrated on isolated studies of incident risks
+                and
+                patterns. For the first time, our XTraffic dataset integrates these two tracks both spatially and
+                temporally
+                across a comprehensive regional scale, encompassing 16,972 traffic nodes for the entire year of 2023.
+                The
+                dataset includes detailed time-series data on traffic flow, lane occupancy, and average vehicle speed,
+                as well
+                as meticulously aligned records of incidents across seven different classes, synchronized with the
+                traffic data. Each
+                node also features extensive physical and policy-level meta-attributes of lanes.
             </p>
         </div>
-        <div class="download-link">
-            <h3>Download:</h3>
+        <div id="download-link" class="download-link section">
+            <h3>Data Croissant File:</h3>
             <p>
-                You can download the dataset <a href="download_link">here</a>.
+                You can download the croissant of XTraffic from <a
+                    href="https://github.com/XAITraffic/XTraffic/blob/main/xtraffic-metadata.json">here</a>.
             </p>
         </div>
-        <!-- Experiment Sections -->
-        <div class="section">
-            <h3>Traffic Forecasting</h3>
-            <p>Description of the task...</p>
-            <table>
-                <!-- Table content here -->
-            </table>
+        <div id="descriptiveanalysis" class="section">
+
+            <h3>Descriptive Analysis</h3>
+            <img src="./images/DescriptiveAnalysis.jpg" alt="DescriptiveAnalysis">
         </div>
-        <div class="section">
-            <h3>Incident Analysis</h3>
-            <p>Description of the task...</p>
-            <table>
-                <!-- Table content here -->
-            </table>
-            <img src="incident_analysis_figure_url" alt="Incident Analysis Figure">
-        </div>
-        <div class="section">
-            <h3>Global Causal Analysis</h3>
-            <p>Description of the task...</p>
-            <img src="global_causal_analysis_figure1_url" alt="Global Causal Analysis Figure 1">
-            <img src="global_causal_analysis_figure2_url" alt="Global Causal Analysis Figure 2">
-        </div>
-        <div class="section">
-            <h3>Local Causal Analysis with Meta Data</h3>
-            <p>Description of the task...</p>
-            <img src="local_causal_analysis_figure1_url" alt="Local Causal Analysis Figure 1">
-            <img src="local_causal_analysis_figure2_url" alt="Local Causal Analysis Figure 2">
+        <!-- Experiments Section -->
+        <div id="experiments" class="section">
+            <h3>Experiments</h3>
+            <!-- Traffic Forecasting -->
+            <div id="traffic-forecasting" class="subsection">
+                <h4>Traffic Forecasting</h4>
+                <p>Traffic forecasting is the task of predicting future traffic conditions, such as traffic volumes,
+                    speeds, and occupancy rates, at various locations within a transportation network using historical
+                    traffic data and other relevant factors.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Test</th>
+                            <th rowspan="2">Model</th>
+                            <th colspan="3">5 Mins (t=1)</th>
+                            <th colspan="3">15 Mins (t=3)</th>
+                            <th colspan="3">30 Mins (t=6)</th>
+                        </tr>
+                        <tr>
+                            <th>MAE</th>
+                            <th>MAPE</th>
+                            <th>RMSE</th>
+                            <th>MAE</th>
+                            <th>MAPE</th>
+                            <th>RMSE</th>
+                            <th>MAE</th>
+                            <th>MAPE</th>
+                            <th>RMSE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="8">General</td>
+                            <td>LSTM</td>
+                            <td>12.58</td>
+                            <td style="background-color: #e0e0e0;">11.81</td>
+                            <td>21.45</td>
+                            <td>15.41</td>
+                            <td>14.21</td>
+                            <td>26.29</td>
+                            <td>18.68</td>
+                            <td>18.03</td>
+                            <td>31.54</td>
+                        </tr>
+                        <tr>
+                            <td>ASTGCN</td>
+                            <td>12.45</td>
+                            <td>13.11</td>
+                            <td>20.90</td>
+                            <td>14.59</td>
+                            <td>13.66</td>
+                            <td>23.10</td>
+                            <td>16.03</td>
+                            <td>15.56</td>
+                            <td>27.82</td>
+                        </tr>
+                        <tr>
+                            <td>DCRNN</td>
+                            <td style="background-color: #e0e0e0;">11.90</td>
+                            <td><strong>11.82</strong></td>
+                            <td><strong>20.47</strong></td>
+                            <td style="background-color: #e0e0e0;">13.41</td>
+                            <td><strong>12.92</strong></td>
+                            <td><strong>23.79</strong></td>
+                            <td><strong>14.84</strong></td>
+                            <td>14.32</td>
+                            <td><strong>26.74</strong></td>
+                        </tr>
+                        <tr>
+                            <td>AGCRN</td>
+                            <td>12.54</td>
+                            <td>12.56</td>
+                            <td>22.65</td>
+                            <td>13.55</td>
+                            <td><u>13.18</u></td>
+                            <td>25.27</td>
+                            <td style="background-color: #e0e0e0;">14.62</td>
+                            <td><strong>14.24</strong></td>
+                            <td>27.92</td>
+                        </tr>
+                        <tr>
+                            <td>GWNET</td>
+                            <td><strong>11.99</strong></td>
+                            <td><u>11.85</u></td>
+                            <td style="background-color: #e0e0e0;">20.30</td>
+                            <td><u>13.53</u></td>
+                            <td style="background-color: #e0e0e0;">12.87</td>
+                            <td style="background-color: #e0e0e0;">23.44</td>
+                            <td><u>14.88</u></td>
+                            <td style="background-color: #e0e0e0;">14.15</td>
+                            <td style="background-color: #e0e0e0;">26.05</td>
+                        </tr>
+                        <tr>
+                            <td>STGODE</td>
+                            <td>12.75</td>
+                            <td>13.26</td>
+                            <td>21.66</td>
+                            <td>14.12</td>
+                            <td>14.57</td>
+                            <td>24.64</td>
+                            <td>15.50</td>
+                            <td>16.34</td>
+                            <td>27.43</td>
+                        </tr>
+                        <tr>
+                            <td>DSTAGNN</td>
+                            <td>13.18</td>
+                            <td>12.15</td>
+                            <td>21.93</td>
+                            <td>16.37</td>
+                            <td>18.82</td>
+                            <td>27.41</td>
+                            <td>19.99</td>
+                            <td>19.97</td>
+                            <td>33.73</td>
+                        </tr>
+                        <tr>
+                            <td>D<sup>2</sup>STGNN</td>
+                            <td><u>12.18</u></td>
+                            <td>12.00</td>
+                            <td><u>21.30</u></td>
+                            <td><strong>13.48</strong></td>
+                            <td>13.20</td>
+                            <td><u>24.30</u></td>
+                            <td>14.90</td>
+                            <td><u>14.27</u></td>
+                            <td><u>27.28</u></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="8">Incident</td>
+                            <td>LSTM</td>
+                            <td>14.17</td>
+                            <td><u>10.13</u></td>
+                            <td>23.75</td>
+                            <td>17.41</td>
+                            <td>15.38</td>
+                            <td>29.43</td>
+                            <td>20.93</td>
+                            <td>14.33</td>
+                            <td>34.05</td>
+                        </tr>
+                        <tr>
+                            <td>ASTGCN</td>
+                            <td>14.06</td>
+                            <td>10.55</td>
+                            <td><u>23.22</u></td>
+                            <td>16.42</td>
+                            <td>15.06</td>
+                            <td>27.63</td>
+                            <td>18.40</td>
+                            <td>12.59</td>
+                            <td>30.48</td>
+                        </tr>
+                        <tr>
+                            <td>DCRNN</td>
+                            <td style="background-color: #e0e0e0;">13.62</td>
+                            <td style="background-color: #e0e0e0;">9.86</td>
+                            <td><strong>23.04</strong></td>
+                            <td style="background-color: #e0e0e0;">15.36</td>
+                            <td><strong>14.35</strong></td>
+                            <td style="background-color: #e0e0e0;">26.73</td>
+                            <td style="background-color: #e0e0e0;">16.92</td>
+                            <td><u>11.69</u></td>
+                            <td><strong>29.38</strong></td>
+                        </tr>
+                        <tr>
+                            <td>AGCRN</td>
+                            <td>14.48</td>
+                            <td>10.98</td>
+                            <td>25.41</td>
+                            <td>15.96</td>
+                            <td>14.78</td>
+                            <td>28.78</td>
+                            <td>17.21</td>
+                            <td>11.78</td>
+                            <td>31.42</td>
+                        </tr>
+                        <tr>
+                            <td>GWNET</td>
+                            <td><strong>13.73</strong></td>
+                            <td>10.44</td>
+                            <td style="background-color: #e0e0e0;">22.90</td>
+                            <td><u>15.60</u></td>
+                            <td><u>14.50</u></td>
+                            <td style="background-color: #e0e0e0;">26.73</td>
+                            <td><strong>17.15</strong></td>
+                            <td><strong>11.49</strong></td>
+                            <td style="background-color: #e0e0e0;">29.07</td>
+                        </tr>
+                        <tr>
+                            <td>STGODE</td>
+                            <td>14.50</td>
+                            <td>10.71</td>
+                            <td>24.49</td>
+                            <td>16.20</td>
+                            <td>15.19</td>
+                            <td>27.69</td>
+                            <td>17.55</td>
+                            <td>12.29</td>
+                            <td><u>30.17</u></td>
+                        </tr>
+                        <tr>
+                            <td>DSTAGNN</td>
+                            <td>14.79</td>
+                            <td>10.57</td>
+                            <td>24.22</td>
+                            <td>18.24</td>
+                            <td>17.91</td>
+                            <td>30.48</td>
+                            <td>21.95</td>
+                            <td>15.38</td>
+                            <td>35.67</td>
+                        </tr>
+                        <tr>
+                            <td>D<sup>2</sup>STGNN</td>
+                            <td><strong>13.73</strong></td>
+                            <td><strong>10.05</strong></td>
+                            <td>23.30</td>
+                            <td><strong>15.51</strong></td>
+                            <td style="background-color: #e0e0e0;">14.22</td>
+                            <td><u>27.29</u></td>
+                            <td><strong>17.03</strong></td>
+                            <td style="background-color: #e0e0e0;">11.46</td>
+                            <td>30.23</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Incident Analysis -->
+            <div id="incident-analysis" class="subsection">
+                <h4>Incident Analysis</h4>
+                <p>Incident classification is the task of identifying and categorizing incidents, such as accidents or
+                    hazards, based on the analysis of traffic time series data from a specific road segment.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Methods</th>
+                            <th colspan="3">Speed channel-only</th>
+                            <th colspan="3">Occupancy channel-only</th>
+                            <th colspan="3">Flow channel-only</th>
+                            <th colspan="3">All channels mixed</th>
+                        </tr>
+                        <tr>
+                            <th>Acc</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>Acc</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>Acc</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>Acc</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DT</td>
+                            <td style="background-color: #e0e0e0;">41.6%</td>
+                            <td style="background-color: #e0e0e0;">41.5%</td>
+                            <td style="background-color: #e0e0e0;">41.5%</td>
+                            <td><strong>40.4%</strong></td>
+                            <td><strong>40.2%</strong></td>
+                            <td><strong>40.2%</strong></td>
+                            <td><strong>39.4%</strong></td>
+                            <td><strong>39.3%</strong></td>
+                            <td><strong>39.3%</strong></td>
+                            <td><strong>41.6%</strong></td>
+                            <td><strong>41.4%</strong></td>
+                            <td><strong>41.5%</strong></td>
+                        </tr>
+                        <tr>
+                            <td>TS2Vec</td>
+                            <td>36.6%</td>
+                            <td>36.2%</td>
+                            <td>36.2%</td>
+                            <td>36.6%</td>
+                            <td>36.5%</td>
+                            <td>36.4%</td>
+                            <td>37.3%</td>
+                            <td>37.0%</td>
+                            <td>37.0%</td>
+                            <td>37.3%</td>
+                            <td>37.0%</td>
+                            <td>37.0%</td>
+                        </tr>
+                        <tr>
+                            <td>gMLP</td>
+                            <td><strong>41.3%</strong></td>
+                            <td><strong>41.2%</strong></td>
+                            <td><strong>41.1%</strong></td>
+                            <td>38.4%</td>
+                            <td>38.3%</td>
+                            <td>38.3%</td>
+                            <td>37.3%</td>
+                            <td>37.2%</td>
+                            <td>37.2%</td>
+                            <td style="background-color: #e0e0e0;">41.6%</td>
+                            <td style="background-color: #e0e0e0;">41.5%</td>
+                            <td style="background-color: #e0e0e0;">41.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Sequencer</td>
+                            <td>35.8%</td>
+                            <td>35.8%</td>
+                            <td>35.6%</td>
+                            <td>35.6%</td>
+                            <td>35.3%</td>
+                            <td>35.2%</td>
+                            <td>34.1%</td>
+                            <td>33.9%</td>
+                            <td>33.9%</td>
+                            <td>40.3%</td>
+                            <td>40.2%</td>
+                            <td>40.2%</td>
+                        </tr>
+                        <tr>
+                            <td>OmniScaleCNN</td>
+                            <td>35.7%</td>
+                            <td>35.1%</td>
+                            <td>35.1%</td>
+                            <td>36.9%</td>
+                            <td>36.3%</td>
+                            <td>36.3%</td>
+                            <td>37.0%</td>
+                            <td>36.8%</td>
+                            <td>36.8%</td>
+                            <td><u>40.9%</u></td>
+                            <td><u>40.8%</u></td>
+                            <td><u>40.8%</u></td>
+                        </tr>
+                        <tr>
+                            <td>PatchTST</td>
+                            <td><u>38.3%</u></td>
+                            <td><u>38.1%</u></td>
+                            <td><u>38.1%</u></td>
+                            <td><u>39.0%</u></td>
+                            <td><u>38.6%</u></td>
+                            <td><u>38.7%</u></td>
+                            <td style="background-color: #e0e0e0;">39.5%</td>
+                            <td style="background-color: #e0e0e0;">39.3%</td>
+                            <td style="background-color: #e0e0e0;">39.3%</td>
+                            <td>39.4%</td>
+                            <td>39.4%</td>
+                            <td>39.3%</td>
+                        </tr>
+                        <tr>
+                            <td>FormerTime</td>
+                            <td>35.9%</td>
+                            <td>31.0%</td>
+                            <td>33.4%</td>
+                            <td style="background-color: #e0e0e0;">41.0%</td>
+                            <td style="background-color: #e0e0e0;">41.1%</td>
+                            <td style="background-color: #e0e0e0;">40.8%</td>
+                            <td><u>37.8%</u></td>
+                            <td><u>38.2%</u></td>
+                            <td><u>37.3%</u></td>
+                            <td>40.5%</td>
+                            <td>40.5%</td>
+                            <td>40.1%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Global Causal Analysis -->
+            <div id="global-causal-analysis" class="subsection">
+                <h4>Global Causal Analysis with Meta Data</h4>
+                <p>Description of the task...</p>
+                <img src="./images/global_causal_analysis.jpg" alt="Global Causal Analysis Figure 1"
+                    style="width: 70%; height: auto;">
+            </div>
+            <!-- Local Causal Analysis with Meta Data -->
+            <div id="local-causal-analysis" class="subsection">
+                <h4>Local Causal Analysis</h4>
+                <p>Description of the task...</p>
+                <img src="./images/local_causal_analysis.jpg" alt="Local Causal Analysis Figure 1"
+                    style="width: 50%; height: auto;">
+            </div>
         </div>
         <!-- Additional Information Section -->
-        <div class="additional-info">
+        <div id="additional-info" class="additional-info">
             <h3>Additional Information</h3>
             <p>Dataset License: Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</p>
             <p>Code License: MIT</p>
         </div>
         <!-- Paper Citation Section -->
-        <div class="citation">
+        <div id="citation" class="citation">
             <h3>Paper Citation</h3>
             <p>Upcoming soon...</p>
         </div>
